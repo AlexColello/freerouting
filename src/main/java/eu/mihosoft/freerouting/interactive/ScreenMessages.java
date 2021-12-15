@@ -166,6 +166,10 @@ public class ScreenMessages
     {
         write_protected = p_value;
     }
+
+    public String get_field_text(){
+        return add_field.getText() + layer_field.getText();
+    }
     
     private final java.util.ResourceBundle resources;
     private final java.util.Locale locale;

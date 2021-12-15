@@ -172,6 +172,7 @@ public class BatchAutorouter
                 }
             }
             FRLogger.traceExit("BatchAutorouter.autoroute_pass #"+curr_pass_no+" on board '"+current_board_hash+"' making {} changes", newTraceDifferences);
+            FRLogger.info(hdlg.screen_messages.get_field_text() + ", incomplete: " + String.valueOf(hdlg.get_ratsnest().incomplete_count()));
 
             // check if there are still unrouted items
             if (still_unrouted_items && !is_interrupted)
