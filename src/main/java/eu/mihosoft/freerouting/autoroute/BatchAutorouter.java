@@ -199,7 +199,7 @@ public class BatchAutorouter
     {
         try
         {
-            Collection<Item> autoroute_item_list = new java.util.LinkedList<Item>();
+            List<Item> autoroute_item_list = new java.util.LinkedList<Item>();
             Set<Item> handeled_items = new TreeSet<Item>();
             Iterator<UndoableObjects.UndoableObjectNode> it = routing_board.item_list.start_read_object();
             for (;;)
@@ -250,6 +250,7 @@ public class BatchAutorouter
             {
                 hdlg.screen_messages.set_batch_autoroute_info(items_to_go_count, routed, ripped_item_count, not_found);
             }
+            Collections.shuffle(autoroute_item_list);
             for (Item curr_item : autoroute_item_list)
             {
                 if (this.is_interrupted)
